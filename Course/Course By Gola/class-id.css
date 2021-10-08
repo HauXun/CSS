@@ -1,0 +1,19 @@
+h1.h1-green {
+    color: green;
+}
+
+h2.h2-blue {
+    color: blue;
+}
+
+.blue {
+    color: darkblue;
+}
+
+h3.red {
+    color: red;
+}
+
+#id {
+    color: yellow;
+}
