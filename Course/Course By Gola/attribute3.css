@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #E7E7E7;
+}
+
+.main-container {
+    width: 380px;
+    height: 210px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+.title {
+    font-family: Helvetica;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid black;
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+}
+
+.title h3 {
+    background-color: black;
+    display: inline-block;
+    color: #FADA1A;
+    padding: 5px 10px;
+}
+
+.title-icon {
+    font-family: Helvetica;
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.icon {
+    width: 120px;
+    height: 120px;
+    background-color: #3B5988;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+
+.twitter {
+    background-color: #1DCAFF;
+}
+
+.gmail {
+    background-color: #DD4B39;
+    margin-right: 0px;
+}
+
+.icon i {
+    font-size: 50px;
+    color: white;
+    background-color: transparent;
+    display: block;
+    margin-top: 20px;
+}
+
+.icon p {
+    background-color: transparent;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.icon:hover {
+    background-color: rgb(41, 38, 38);
+    margin-top: 10px;
+    transition: 0.4s;
+}
+
+.display {
+    display: inline-block;
+    background-color: white;
+    color: #FADA1A;
+    position: relative;
+    top: 16px;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
