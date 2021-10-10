@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.main {
+    margin-top: 20px;
+    background-image: url("D:\\Download\\Windoge.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    width: 50%;
+    height: 70%;
+    background-color: black;
+    opacity: 0.6;
+    font-family: Helvetica;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.block p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    width: 80%;
+    height: 40px;
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content {
+    width: 90%;
+    height: 30px;
+    margin-top: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-content {
+    width: 30%;
+    margin-right: 5%;
+}
+
+.sub-content i {
+    height: 50px;
+    color: white;
+    font-size: 30px;
+    float: left;
+    display: inline;
+}
