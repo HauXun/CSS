@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#menu ul ul>p {
+    background: red;
+    color: white;
+}
