@@ -1,0 +1,18 @@
+div {
+    background-image: url('D:\\Download\\Windoge.jpg'), url('https://coin68.com/wp-content/uploads/2021/04/anatoly-muschenko-dogecoin2-1024x517.jpg');
+    width: 2000px;
+    height: 2000px;
+    padding: 55px;
+    /* 
+    no-repeat
+    repeat
+    repeat-x
+    repeat-y
+    space
+    round
+     */
+    background-repeat: no-repeat;
+    /* 1, 2, 3 */
+    background-position: top right, bottom left;
+    background-size: 1000px, 500px;
+}
