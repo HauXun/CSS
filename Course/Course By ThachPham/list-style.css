@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+ul {
+    background: red;
+    padding: 0;
+    margin-left: 32px;
+    width: 250px;
+}
+
+li {
+    /* 
+    disc
+    circle
+    square
+    decimal
+    lower-roman
+    upper-roman
+    none
+     */
+    list-style: none;
+    /* 
+    outside
+    inside
+    */
+    list-style-position: inside;
+    list-style-image: url('https://pngimg.com/uploads/dot/small/dot_PNG29.png');
+    /* list-type: type position image */
+}
