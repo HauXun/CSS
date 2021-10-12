@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#box {
+    width: 200px;
+    height: 200px;
+    background: red;
+    /* transition: [attribute] [time changed] [delay time] [easing function] */
+    transition: all 1s 0.2s ease-in;
+    -moz-transition: all 1s 0.2s ease-in;
+    -webkit-transition: all 1s 0.2s ease-in;
+}
+
+#box:hover {
+    background: red;
+    margin-left: 250px;
+}
