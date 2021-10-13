@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#menu {
+    width: 150px;
+}
+
+a:link,
+a:visited {
+    background-color: yellow;
+    color: blue;
+    clear: both;
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+a:hover {
+    background-color: red;
+}
