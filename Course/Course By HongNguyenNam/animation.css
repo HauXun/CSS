@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    background-color: #333;
+    font-family: Helvetica;
+}
+
+button {
+    font-size: 22px;
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: none;
+    border: 3px solid deepskyblue;
+    color: deepskyblue;
+    border-radius: 70px;
+    animation: resize 3s infinite;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background: deepskyblue;
+    animation: load 3s infinite;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    right: 23px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    border-bottom: 3px solid;
+    border-right: 3px solid;
+    box-shadow: 3px 3px #333, 6px 6px deepskyblue;
+    transform: rotate(45deg);
+    animation: bounce 3s infinite;
+}
+
+@keyframes resize {
+    0%,
+    20% {
+        width: 250px;
+        line-height: 64px;
+    }
+    25%,
+    100% {
+        line-height: 150px;
+        border-color: deepskyblue;
+    }
+    30%,
+    100% {
+        width: 70px;
+        border-color: #444;
+    }
+}
+
+@keyframes load {
+    0%,
+    40% {
+        height: 0;
+    }
+    90%,
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20% {
+        line-height: 25px;
+        top: 10px;
+    }
+    30%,
+    40%,
+    50%,
+    60%,
+    70%,
+    80% {
+        top: 14px;
+    }
+    35%,
+    45%,
+    55%,
+    65%,
+    75%,
+    85% {
+        top: 22px;
+    }
+    54% {
+        color: deepskyblue;
+        box-shadow: 3px 3px #333, 6px 6px deepskyblue;
+    }
+    55%,
+    85% {
+        color: #333;
+        box-shadow: 3px 3px deepskyblue, 6px 6px #333;
+        border-width: 3px;
+        height: 15px;
+    }
+    90%,
+    100% {
+        color: deepskyblue;
+        box-shadow: 1px, 1px #333;
+        border-width: 5px;
+        height: 25px;
+        color: white;
+    }
+}
