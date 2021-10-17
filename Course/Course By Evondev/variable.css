@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+:root {
+    --my-color: red;
+}
+
+h1 {
+    color: var(--my-color);
+}
+
+h2 {
+    --my-color: blue;
+    color: var(--my-color);
+}
