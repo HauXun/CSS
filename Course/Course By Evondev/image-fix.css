@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+div {
+    height: 500px;
+    width: 1000px;
+    background-image: url('D:\\Download\\Windoge.jpg');
+    object-fit: cover;
+    object-position: bottom;
+}
