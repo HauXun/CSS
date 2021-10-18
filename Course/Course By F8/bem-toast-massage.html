@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bem-toast-massage.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Success -->
+    <div id="toast"></div>
+    <div>
+        <div onclick="showSuccessToast();" class="btn btn-success">Show success toast</div>
+        <div onclick="showErrorToast();" class="btn btn-danger">Show error toast</div>
+    </div>
+    <script>
+        function toast({
+            title = '',
+            message = '',
+            type = 'error',
+            duration = 3000
+        }) {
+            const main = document.getElementById('toast');
+            if (main) {
+                const toast = document.createElement('div');
+                const autoRemoveId =
+                    setTimeout(() => {
+                        main.removeChild(toast);
+                    }, duration + 1000);
+                toast.onclick = function(e) {
+                    if (e.target.closest('.toast-close')) {
+                        main.removeChild(toast);
+                        clearTimeout(autoRemoveId);
+                    }
+                }
+                const icons = {
+                    success: 'fad fa-check-circle',
+                    info: 'fad fa-info-circle',
+                    warning: 'fas fa-exclamation-square',
+                    error: 'far fa-times'
+                }
+                const icon = icons[type];
+                const delay = (duration / 1000).toFixed(2);
+
+                toast.classList.add('toast', `toast--${type}`);
+                toast.style.animation = `slideInLeft ease 0.3s, fadeOut linear 1s ${delay}s forwards`;
+                toast.innerHTML = `
+                <div class="toast-icon">
+                <i class="${icon}"></i>
+                </div>
+                <div class="toast-body">
+                    <h3 class="toast-title">${title}</h3>
+                    <p class="toast-msg">${message}</p>
+                </div>
+                <div class="toast-close">
+                    <i class="far fa-times"></i>
+                </div>
+                `;
+                main.appendChild(toast);
+            }
+        }
+
+        function showSuccessToast() {
+            toast({
+                title: 'Success',
+                message: 'Ví dụ dùng BEM tạo Toast Message UI',
+                type: 'success',
+                duration: 3000
+            });
+        }
+
+        function showErrorToast() {
+            toast({
+                title: 'Error',
+                message: 'Ví dụ dùng BEM tạo Toast Message UI',
+                type: 'error',
+                duration: 3000
+            });
+        }
+    </script>
+    <!-- Info -->
+    <div class="toast toast--info">
+        <div class="toast-icon">
+            <i class="fad fa-check-circle"></i>
+        </div>
+        <div class="toast-body">
+            <h3 class="toast-title">Info</h3>
+            <p class="toast-msg">Ví dụ dùng BEM tạo Toast Message UI</p>
+        </div>
+        <div class="toast-close">
+            <i class="far fa-times"></i>
+        </div>
+    </div>
+    <!-- Error -->
+    <div class="toast toast--error">
+        <div class="toast-icon">
+            <i class="fad fa-check-circle"></i>
+        </div>
+        <div class="toast-body">
+            <h3 class="toast-title">Error</h3>
+            <p class="toast-msg">Ví dụ dùng BEM tạo Toast Message UI</p>
+        </div>
+        <div class="toast-close">
+            <i class="far fa-times"></i>
+        </div>
+    </div>
+    <!-- Warning -->
+    <div class="toast toast--warning">
+        <div class="toast-icon">
+            <i class="fad fa-check-circle"></i>
+        </div>
+        <div class="toast-body">
+            <h3 class="toast-title">Warning</h3>
+            <p class="toast-msg">Ví dụ dùng BEM tạo Toast Message UI</p>
+        </div>
+        <div class="toast-close">
+            <i class="far fa-times"></i>
+        </div>
+    </div>
+</body>
+
+</html>
