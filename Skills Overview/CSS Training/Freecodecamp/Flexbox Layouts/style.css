@@ -1,0 +1,133 @@
+/* =========================
+   FLEXBOX LAYOUTS #1
+   ========================= */
+
+.final__layout1 main {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(30, 252, 252, 0.619);
+}
+
+.final__layout1 article {
+    flex: 1 58%;
+    margin-right: 2%;
+    background-color: aquamarine;
+}
+
+.final__layout1 aside {
+    flex: 1 40%;
+    background-color: rgba(65, 183, 234, 0.708);
+}
+
+.final__layout1 footer {
+    background-color: rgb(56, 191, 228);
+}
+
+
+/* =========================
+      FLEXBOX LAYOUTS #2
+      ========================= */
+
+.final__layout2 header {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(30, 252, 252, 0.619);
+}
+
+.final__layout2 header nav {
+    flex: 1;
+    margin-left: 2%;
+    background-color: aquamarine;
+}
+
+.final__layout2 main {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(65, 183, 234, 0.708);
+}
+
+.final__layout2 article {
+    flex: 1 56%;
+    margin-right: 2%;
+    margin-left: 2%;
+    background-color: rgb(56, 191, 228);
+}
+
+.final__layout2 aside.sidenav,
+.final__layout2 aside.sidebar {
+    flex: 1 20%;
+    background-color: rgb(38, 115, 137);
+}
+
+.final__layout2 footer {
+    background-color: rgba(70, 140, 159, 0.598);
+}
+
+
+/* =========================
+      FLEXBOX LAYOUTS #3
+      ========================= */
+
+.final__layout3 header {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgba(30, 252, 252, 0.619);
+}
+
+.final__layout3 header nav {
+    flex: 1;
+    margin-right: 2%;
+    background-color: aquamarine;
+}
+
+.final__layout3 .articles {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(65, 183, 234, 0.708);
+}
+
+.final__layout3 article {
+    flex: 1;
+    margin: 0 2%;
+    background-color: rgb(56, 191, 228);
+}
+
+.final__layout3 article:first-child,
+.final__layout3 article:last-child {
+    background-color: rgb(38, 115, 137);
+    margin: 0;
+}
+
+.final__layout3 footer {
+    background-color: rgba(70, 140, 159, 0.598);
+}
+
+
+/* ============================================
+      SIMPLE MEDIA QUERIES FOR RESPONSIVE LAYOUTS
+      ============================================ */
+
+@media screen and ( max-width: 768px) {
+    .final__layout1 main,
+    .final__layout1 article,
+    .final__layout1 aside,
+    .final__layout2 header,
+    .final__layout2 header .logo,
+    .final__layout2 header nav,
+    .final__layout2 main,
+    .final__layout2 article,
+    .final__layout2 aside.sidenav,
+    .final__layout2 aside.sidebar,
+    .final__layout3 main,
+    .final__layout3 .articles,
+    .final__layout3 article,
+    .final__layout3 aside,
+    .final__layout3 header,
+    .final__layout3 header .logo,
+    .final__layout3 header nav {
+        display: block;
+        /* float: none; */
+        width: 100%;
+        margin: 0 0 2%;
+    }
+}
