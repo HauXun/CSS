@@ -1,0 +1,26 @@
+img.final__image {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans serif;
+    font-size: 0.7em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img.final__image:after {
+    display: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 200px;
+    padding: 10px 20px 10px 45px;
+    border: 1px dashed #888888;
+    background-color: #f0f0f0;
+    background-image: url('https://uc0b837b52be663cb85a5e447495.previews.dropboxusercontent.com/p/thumb/ABXaq9sSbImCei4a_L4BRU_xxT91-Ez2JpNnxoSEY5pCGIAvuZX8mG4QJVt9mWX1jtAa89sv9PsE2dE5tN6dT6hB1DxMsSvx8OKYSEip7PSknRgCBBwnAlG50pMVB_EFtBcey0J5DfNdr4oNHc_X-A2BStDcuUUVuDmJOhGkpqOzEPwAkJgAVHrfxAo7tKtbT8pGbcMLO3VKoDUIhSloK165TpzIJhFRVWDOS27LcIQHeFI2tKxT2QcoX3efPu3M1b_UfcXRRiPSt9ZUBk1ZYc_lbAyP533aIsFxJJD-lLCChwN0fvtuwGfh_fEFO9zGgXLMScfbFE_2865CgZWaJmXXk30bMcImTDktMiYkw6ZTHw/p.png?fv_content=true&size_mode=5');
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 15px 2px;
+    z-index: 1;
+    content: "" attr(alt) " Not Found";
+}
