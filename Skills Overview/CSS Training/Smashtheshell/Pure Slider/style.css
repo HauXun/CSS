@@ -1,0 +1,156 @@
+body {
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 16px;
+    padding: 1em;
+    color: #f3f3f3;
+    background-color: #34495e;
+}
+
+#slider {
+    width: 100%;
+    height: auto;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 0.3em;
+    border: 2px solid #34495e;
+    position: relative;
+    overflow: hidden;
+    /* display: flex; */
+}
+
+figure {
+    margin: 0;
+}
+
+.slide figure {
+    width: 100%;
+    padding: 0;
+    margin-right: -100%;
+    float: left;
+}
+
+.slide figure img {
+    width: 1024px;
+    max-width: 100%;
+    height: auto;
+    max-height: 360px;
+    margin: 0 auto;
+}
+
+.slide input[type="radio"] {
+    display: none;
+}
+
+.slide label {
+    /* tuyệt đối của cả slider chứ không phải cá nhân 1 slide riêng biệt */
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    top: 1em;
+    cursor: pointer;
+    background: rgba(230, 126, 34, .7);
+    z-index: 1;
+}
+
+.slide .label-1 {
+    left: 1em;
+}
+
+.slide .label-2 {
+    left: 2.25em;
+}
+
+.slide .label-3 {
+    left: 3.50em;
+}
+
+.slide .label-4 {
+    left: 4.75em;
+}
+
+.slide .label-5 {
+    left: 6em;
+}
+
+.slide .label:hover,
+.slide input[type="radio"]:checked~label {
+    background: rgba(131, 206, 130, .7);
+    transition: .2s background;
+}
+
+
+/* radio được checked sẽ ủy thác lên và hạn chế các đối tượng còn lại xuống */
+
+.slide input[type="radio"]:not(:checked)~figure {
+    /* ẩn các đối tượng chưa được ủy thác xuống */
+    opacity: 0;
+    /* thời giản chuyển delay trong 0.6 giây */
+    transition: opacity .6s;
+    /* hạn chế con trỏ chuột đối với đối tượng figure chưa được ủy thác */
+    pointer-events: none;
+}
+
+
+/* Tiêu đề hình ảnh */
+
+.slide figcaption {
+    position: absolute;
+    padding: 1em;
+    /* đẩy xuống dưới cùng để ẩn đi */
+    bottom: -20%;
+    line-height: 1.6em;
+    box-sizing: border-box;
+    color: #ecf0f1;
+    transition: all 0.5s;
+}
+
+
+/* nếu checked thì tự động ủy thác lên ngược lại tự ẩn đi */
+
+.slide input[type="radio"]:checked~figure>figcaption {
+    width: calc(100% - .6em);
+    bottom: .3em;
+    background-color: rgba(34, 49, 63, .6);
+    transition: all 0.5s;
+}
+
+.slide input[type="radio"]:checked~figure {
+    -webkit-animation: animateSlide .4s alternate;
+    -moz-animation: animateSlide .4s alternate;
+    animation: animateSlide .4s alternate;
+}
+
+@-webkit-keyframes animateSlide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-moz-keyframes animateSlide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes animateSlide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
