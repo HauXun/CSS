@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: teal;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    width: 500px;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+details>summary::-webkit-details-marker,
+details>summary::marker {
+    display: none;
+    content: '';
+}
+
+details,
+summary {
+    outline: none;
+    color: #fff;
+    user-select: none;
+}
+
+details {
+    margin-bottom: 5px;
+    background-color: #504e4e;
+}
+
+summary {
+    font-size: 20px;
+    color: #111;
+    padding: 10px 20px 8px;
+    position: relative;
+    font-family: sans-serif;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+summary::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-color: teal transparent transparent transparent;
+    left: calc(50% + 5px);
+    top: calc(50% + 5px);
+    transform: translate(calc(-50% + 5px), calc(-50% + 5px));
+    bottom: 0;
+    margin: auto;
+}
+
+summary::after {
+    left: 95%;
+}
+
+details .text-section {
+    padding: 26px 30px;
+    text-align: justify;
+}
+
+details[open] summary {
+    background-color: #807e7e;
+}
+
+details[open] summary::after {
+    border-top-color: #fff;
+}
