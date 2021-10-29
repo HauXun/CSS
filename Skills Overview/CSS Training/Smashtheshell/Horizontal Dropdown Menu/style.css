@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+footer,
+header {
+    background: #00b4de;
+    color: #fbfbfb;
+    text-align: center;
+    padding: 2em 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 1280px;
+}
+
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+main,
+nav {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    perspective: 800px;
+    z-index: 999;
+}
+
+#main-navigation-container {
+    width: 100%;
+    height: 6%;
+    background: #03596d;
+}
+
+.company-title {
+    float: left;
+}
+
+.company-title li a {
+    font-size: 1.3rem;
+    line-height: 3rem;
+}
+
+.navigation-items {
+    float: right;
+}
+
+.navigation-items>ul>li {
+    float: left;
+    height: 100%;
+}
+
+.navigation-items>ul>li>a {
+    line-height: 3rem;
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.submenu-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: #f2f2f2;
+    border: 1px solid #cecece;
+    border-top: none;
+    padding: 1rem;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateY(180deg);
+    transform-origin: top;
+    transition: .4s opacity ease, .4s transform cubic-bezier(0.902, 0.149, 0.22, 0.934);
+}
+
+.navigation-items>ul>li:hover>a+.submenu-container {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1002;
+    transform: rotateY(0);
+}
+
+.navigation-items>ul>li:hover>a,
+.navigation-items>ul>li:focus>a {
+    background: #f2f2f2;
+    color: #d60052;
+}
+
+.list {
+    float: left;
+    width: 20%;
+}
+
+.category-title h2 {
+    color: #03596d;
+    display: inline-block;
+    margin: .5rem 0;
+    font-size: .9rem;
+}
+
+.submenu li a {
+    font-size: .9rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.submenu li a:hover {
+    color: #f7005f;
+    border-bottom: 1px dotted #03596d;
+}
+
+#main-navigation-container::after,
+#main-navigation-container::before {
+    content: '';
+    display: block;
+}
+
+#main-navigation-container::after {
+    clear: both;
+}
+
+
+/*Styling Content*/
+
+main {
+    padding: 1rem 0;
+    z-index: 100;
+}
+
+main section>h1 {
+    margin: 1rem 0;
+}
+
+main section>p {
+    line-height: 1.6;
+}
