@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    border: 1px solid #000;
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    transition: flex-grow 0.3s;
+    transform: skew(-20deg, 0);
+    overflow: hidden;
+}
+
+.slide:hover {
+    flex-grow: 4;
+    transition: flex-grow 0.3s;
+}
+
+.slide::before {
+    content: '';
+    width: calc(100% + 224px);
+    height: 100%;
+    position: absolute;
+    background-image: url('https://images.unsplash.com/photo-1617468264185-e6535390e9a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+    background-size: auto 100%;
+    transform: skew(20deg, 0);
+    margin-left: -145px;
+    margin-right: -145px;
+}
+
+.slide:first-child {
+    margin-left: -145px;
+}
+
+.slide:last-child {
+    margin-right: -145px;
+}
+
+.slide h1 {
+    padding: 10px;
+    transform: skew(20deg, 0);
+    color: #fff;
+}
+
+.slide:first-child h1 {
+    margin-left: 20px;
+}
+
+.slide-1::before {
+    background-image: url('https://images.unsplash.com/photo-1617468264163-93e5eadb72f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+}
+
+.slide-2::before {
+    background-image: url('https://media.istockphoto.com/photos/gamepad-in-female-hands-closeup-on-tv-screen-background-gaming-picture-id1300949640?b=1&k=20&m=1300949640&s=170667a&w=0&h=iX-OGTSPzHDcuvo0dux2aNypea-EHuwF-mc2qM2hirA=');
+}
+
+.slide-3::before {
+    background-image: url('https://images.unsplash.com/photo-1617468264388-8b8cd1f7aba5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+}
+
+.slide-4::before {
+    background-image: url('https://images.unsplash.com/photo-1617468264166-3bf1e56539f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+}
+
+.slide-5::before {
+    background-image: url('https://images.unsplash.com/photo-1617468264204-92588bd6485a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+}
