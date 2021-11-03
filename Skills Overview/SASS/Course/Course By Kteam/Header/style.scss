@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.list div {
+    display: list-item;
+    list-style-type: decimal;
+    margin-left: 32px;
+}
+
+.container {
+    width: 60%;
+    margin: 0, auto;
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.col {
+    display: table-cell;
+    background: red;
+    border: 1px blue solid;
+    color: black;
+}
