@@ -13,6 +13,13 @@
         color: $color-grey;
         background-color: $color-white;
     }
+    &__blue {
+        color: $color-white;
+        background-color: $medium-blue;
+        &::after {
+            background-color: $medium-blue;
+        }
+    }
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 5px 10px rgba($color-black, 2);
@@ -43,4 +50,27 @@
         animation: moveinbottom 1s linear;
         animation-fill-mode: backwards;
     }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        color: $medium-blue;
+        display: inline-block;
+        padding: .3rem;
+        text-decoration: none;
+        font-size: $default-font-size;
+        border-bottom: 1px solid $medium-blue;
+    }
+    &:hover {
+        background-color: $medium-blue;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-0.2rem);
+    }
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+    transition: all .2s linear;
 }

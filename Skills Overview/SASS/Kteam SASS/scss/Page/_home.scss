@@ -1,0 +1,30 @@
+.section-about {
+    background-color: $color-grey-light;
+    padding: 25rem 0;
+    margin-top: -25rem;
+}
+
+.section-skills {
+    background-image: linear-gradient(to right bottom, rgba($light-blue, .8), rgba($dark-blue, .8)), url('https://images.unsplash.com/photo-1636022490849-1f88045af3ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+    padding: 20rem 0;
+    margin-top: -20rem;
+    background-size: cover;
+    position: relative;
+    clip-path: ellipse(70% 50% at 50% 50%);
+}
+
+.section-courses {
+    background-color: $color-grey-light;
+    padding: 25rem 0 10rem;
+    margin-top: -20rem;
+}
+
+.section-testimonials {
+    position: relative;
+    padding: 5rem 0;
+}
+
+.section-enroll {
+    padding: 10rem 0;
+    background-image: linear-gradient(to right bottom, $light-blue, $dark-blue);
+}
