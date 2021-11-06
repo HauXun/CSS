@@ -1,0 +1,18 @@
+.footer {
+    background-color: $mainBlue;
+    padding: 5rem 0;
+    text-align: center;
+    color: white;
+    &__text {
+        font-weight: 200;
+        font-size: 3rem;
+        letter-spacing: 1px;
+        line-height: 2;
+    }
+    @include largePhone {
+        font-size: 1.8rem;
+    }
+    &__link {
+        color: $mainRed;
+    }
+}
