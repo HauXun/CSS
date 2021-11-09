@@ -1,0 +1,69 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.monitor {
+    width: 350px;
+    height: 200px;
+    background-color: #000;
+    border-bottom: 30px solid #d8d8d8;
+    border-radius: 10px;
+}
+
+.monitor::before {
+    content: '';
+    width: 70px;
+    height: 60px;
+    background-color: #dbdbdb;
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+    transform: perspective(100px) translateX(-50%) rotateX(25deg) skewX(7deg);
+    transform-origin: bottom;
+    z-index: -1;
+}
+
+.monitor::after {
+    content: '';
+    width: 140px;
+    height: 15px;
+    background-color: #dbdbdb;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    z-index: -1;
+}
+
+.monitor i {
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .3);
+    transform: skewX(-5deg);
+}
