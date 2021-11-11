@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url('https://i.ytimg.com/vi/a1NuN9TCITQ/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLA6KDCtKaO31zEZH6UIr8BIu7mTdQ');
+    background-size: cover;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background: url('https://i.ytimg.com/vi/EZyDHyEYv34/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLAlMYE5zZZAG76sq4lXYCaGrOablQ');
+    background-size: contain;
+    shape-outside: circle();
+    border-radius: 50%;
+    float: left;
+    margin: 60px 30px 30px 0;
+}
+
+P {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    line-height: 22px;
+}
+
+h1 {
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 30px;
+}
