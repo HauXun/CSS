@@ -1,3 +1,8 @@
+section {
+    float: left;
+    margin: 100px;
+}
+
 .final__clip-image-1 {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);

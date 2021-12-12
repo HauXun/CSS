@@ -50,11 +50,11 @@ body {
 
 .page::after {
     content: '';
-    width: 100%;
+    width: 104%;
     height: 30px;
     background-color: #ccc;
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: skewX(-45deg) translate(-5px, -30px);
+    transform: skewX(-45deg) translate(-5px, 30px);
 }
